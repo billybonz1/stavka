@@ -227,7 +227,8 @@ a:hover
 .popular-item
 	padding-bottom: 48px
 	img
-		width: 100%
+		display: block
+		margin: 0 auto
 .popular-item__title
 	color: #616161
 	font-size: 18px
@@ -252,5 +253,96 @@ a:hover
 h3
 	color: #4e4e4e
 	font-size: 28px
+.about-us
+	padding-bottom: 20px
+.about-us__item
+	margin-top: 20px
+	img,.about-us__item__inner
+		display: inline-block
+		vertical-align: top
+	img
+		width: 10%
+		margin-right: 4%
+	.about-us__item__inner
+		width: 80%
+	h4
+		margin: 0
+		font-size: 20px
+		font-weight: bold
+		color: #6aa90b
+		position: relative
+		&:after
+			position: absolute
+			content: ""
+			width: 45px
+			left: 0
+			bottom: -13px
+			border-bottom: 1px solid rgba(97,97,97,0.33)
+
+	p
+		font-size: 14px
+		color: #616161
+		margin-top: 30px
+.production
+	padding-top: 25px
+	background: #f5f5f5
+	h2
+		font-size: 28px
+		color: #4e4e4e
+		position: relative
+		text-align: center
+		&:after
+			position: absolute
+			content: ""
+			width: 45px
+			left: 50%
+			margin-left: -22.5px
+			bottom: -13px
+			border-bottom: 1px solid rgba(97,97,97,0.33)
+	p
+		color: #616161
+		font-size: 18px
+		font-weight: 300
+.center
+	text-align: center
+.btn-green
+	border: 0
+	outline: 0
+	font-size: 16px
+	color: #fff !important
+	font-weight: 500
+	padding: 9px 32px
+	margin: 20px 0 40px 0
+	text-align: center
+	display: inline-block
+	background: #6aa90b
+	text-decoration: none !important
+	&:hover
+		background: darken(#6aa90b,5%)
+	&:focus
+		background: darken(#6aa90b,10%)
+.contact-us
+	background: url(../img/contact-us.jpg)
+	h3
+		color: #fff
+		text-align: center
+	label
+		display: block
+		font-size: 16px
+		color: #4e4e4e
+		margin-bottom: 6px
+	input,textarea
+		display: block
+		width: 100%
+		border: 0
+		outline: 0
+		height: 38px
+		margin-bottom: 10px
+	textarea
+		height: 117px
+		resize: none
+	form
+		max-width: 717px
+		margin: 0 auto
 //ALWAYS END
 @import "media"
