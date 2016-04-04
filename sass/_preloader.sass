@@ -1,0 +1,50 @@
+$primary: #63696a
+$accent: #45c8ba
+$duration: 1200ms
+
+body
+  background-color: #3c4345
+
+.nav-example
+  width: 100%
+  height: 100%
+  overflow: hidden
+  background: darken(#ededed, 10%)
+  text-align: center
+  img
+      animation: move-key-down 3s ease infinite
+      animation-delay: 1s
+      transform: scale(1)
+      position: relative
+      top: 40%
+      opacity: 0
+
+
+@keyframes move-key-down
+  0%
+    transform: rotateZ(-25deg)
+    opacity: 0.2
+  80%
+    transform: rotateZ(360deg)
+    opacity: 0.5
+  100%
+    transform: rotateZ(0deg)
+    opacity: 1
+
+
+// helpers
+*
+  box-sizing: border-box
+
+.center-xy
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 10000
+  transition: .3s opacity
+  opacity: 1
+  visibility: visible
+.center-xy.h
+  opacity: 0
+.center-xy.h1
+  visibility: hidden

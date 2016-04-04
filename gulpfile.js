@@ -36,17 +36,19 @@ gulp.task('scripts', function() {
 		'./app/libs/animate/animate-css.js',
 		'./app/libs/plugins-scroll/plugins-scroll.js',
 		'./app/libs/owl/owl.carousel.min.js',
+		'./app/libs/common.js',
 		])
-		.pipe(concat('libs.js'))
+		.pipe(concat('common.js'))
 		// .pipe(uglify()) //Minify libs.js
 		.pipe(gulp.dest('./app/js/'));
 });
 
 gulp.task('watch', function () {
 	gulp.watch('sass/*.sass', ['styles']);
-	gulp.watch('app/libs/**/*.js', ['scripts']);
+	gulp.watch('app/libs/**/*.js', ['scripts']).on("change", browserSync.reload);
+	gulp.watch('app/libs/*.js', ['scripts']).on("change", browserSync.reload);
 	gulp.watch('app/js/*.js').on("change", browserSync.reload);
 	gulp.watch('app/*.html').on('change', browserSync.reload);
 });
 
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', ['scripts','browser-sync', 'watch']);
